@@ -1,12 +1,20 @@
 @nice-grey: #F7F7F7;
 @nice-blue-dark: #386082;
-
 @nice-orange: #FFA538;
 @nice-orange-dark: #DD8C33;
 @nice-orange-highlight: #FFBD47;
 @nice-orange-light: rgba(175, 49, 95, .9);
 @nice-orange-lighter: rgba(175, 49, 95, .7);
 @nice-orange-gradient: hsla(36, 90%, 80%, .8), hsla(36, 90%, 70%, .2);
+
+@media (min-width: 544px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
 
 @font-face {
 	font-family: 'Pacifico';
@@ -15,13 +23,19 @@
 	src: local('Pacifico'), url('http://themes.googleusercontent.com/font?kit=fKnfV28XkldRW297cFLeqfesZW2xOQ-xsNqO47m55DA') format('truetype');
 }
 
-html, body {
+.maxheight {
 	height: 100%;
+}
+
+html, body {
+	.maxheight;
 	background-color: @nice-grey;
 }
 
 .page {
-	height: 100%;
+	.maxheight;
+}
+.text-center {
 	text-align: center;
 }
 
@@ -29,18 +43,18 @@ html, body {
 	.row-1 {
 		height: 15%;
 		h1 {
-			text-align: center;
+			.text-center;
 			font-family: 'Pacifico';
 		}
 	}
 
 	.row-2 {
-		height: 20%;
-		text-align: left;
+		height: 15%;
 	}
 
 	.row-3 {
 		height: 30%;
+		.text-center;
 
 		.button {
 			display: inline-block;
@@ -82,23 +96,25 @@ html, body {
 	}
 
 	.row-4 {
-		height: 35%;
-		background-color: @nice-blue-dark;
+		height: 40%;
+		
+		.row-4-1 {
+			.maxheight;
+			background-color: @nice-blue-dark;
+			.text-center;
 
-		.video {
-			video, video img {
-				width: 340px;
-				height: 170px;
+			.video {
+				video, video img {
+					width: 340px;
+					height: 170px;
+					border-radius: 10px;
+				}
 			}
-		}
 
-		.buttons {
-			display: flex;
-			justify-content: space-around;
-
-			button {
-				margin-bottom: 2%;
-			}
+			.buttons {
+				button {
+				}
+			}	
 		}
 	}
 }
