@@ -1,0 +1,104 @@
+@nice-grey: #F7F7F7;
+@nice-blue-dark: #386082;
+
+@nice-orange: #FFA538;
+@nice-orange-dark: #DD8C33;
+@nice-orange-highlight: #FFBD47;
+@nice-orange-light: rgba(175, 49, 95, .9);
+@nice-orange-lighter: rgba(175, 49, 95, .7);
+@nice-orange-gradient: hsla(36, 90%, 80%, .8), hsla(36, 90%, 70%, .2);
+
+@font-face {
+	font-family: 'Pacifico';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Pacifico'), url('http://themes.googleusercontent.com/font?kit=fKnfV28XkldRW297cFLeqfesZW2xOQ-xsNqO47m55DA') format('truetype');
+}
+
+html, body {
+	height: 100%;
+	background-color: @nice-grey;
+}
+
+.page {
+	height: 100%;
+	text-align: center;
+}
+
+.page-intro {
+	.row-1 {
+		height: 15%;
+		h1 {
+			text-align: center;
+			font-family: 'Pacifico';
+		}
+	}
+
+	.row-2 {
+		height: 20%;
+		text-align: left;
+	}
+
+	.row-3 {
+		height: 30%;
+
+		.button {
+			display: inline-block;
+			font-size: 2.6rem;
+			font-variant: all-petite-caps;
+			border-radius: 50%;
+			color: #fff;
+			box-shadow: 0 8px 0 @nice-orange-dark, 0 15px 20px rgba(0, 0, 0, .35);
+			transition: box-shadow .1s ease-in-out;
+		}
+
+		.button span {
+			display: inline-block;
+			height: 180px;
+			width: 190px;
+			vertical-align: middle;
+			padding: 38px 0 0 0;
+			line-height: 1;
+			border-radius: 50%;
+			background-color: @nice-orange; //rgb(236, 82, 141);
+			background-image: linear-gradient(@nice-orange-gradient); //hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2)
+			box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+			text-shadow: 0 -1px 1px @nice-orange-lighter;
+			transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+		}
+
+		.button:hover span {
+			background-color: @nice-orange-highlight; //rgb(236, 106, 156);
+			text-shadow: 0 -1px 1px @nice-orange-light, 0 0 5px rgba(255, 255, 255, .8);
+		}
+
+		.button:active, .button:focus {
+			box-shadow: 0 8px 0 @nice-orange-dark, 0 12px 10px rgba(0, 0, 0, .3);
+		}
+
+		.button:active span {
+			transform: translate(0, 4px);
+		}
+	}
+
+	.row-4 {
+		height: 35%;
+		background-color: @nice-blue-dark;
+
+		.video {
+			video, video img {
+				width: 340px;
+				height: 170px;
+			}
+		}
+
+		.buttons {
+			display: flex;
+			justify-content: space-around;
+
+			button {
+				margin-bottom: 2%;
+			}
+		}
+	}
+}
