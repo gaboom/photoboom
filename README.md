@@ -1,6 +1,8 @@
 # photoboom
 
-# TODO
+Live demo: https://gaboom.github.io/photoboom/app-client/
+
+## TODO
 
 - bootstrap layout
 - 
